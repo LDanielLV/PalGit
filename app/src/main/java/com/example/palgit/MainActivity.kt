@@ -1,6 +1,8 @@
 package com.example.palgit
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,5 +18,11 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val btnTacos = findViewById<Button>(R.id.btnTacos)
+        btnTacos.setOnClickListener {
+            val intentTacos = Intent(this, TacosActivity::class.java)
+            startActivity(intentTacos)
+        }
     }
+
 }

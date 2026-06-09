@@ -1,10 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#D35555"
+    android:orientation="vertical"
+    android:padding="25dp"
     tools:context=".TacosActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Taqueria Lopez"
+        android:textColor="#FFFFFF"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:textSize="20sp"
+                android:text="Taco de Asada $20"
+                android:textColor="#FFFFFF" />
+
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:textSize="20sp"
+                android:text="Taco de Adobada $30"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:textSize="20sp"
+                android:text="Coca $20"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:textSize="20sp"
+                android:text="Torta de Asada $50"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="150dp"
+                android:textSize="20sp"
+                android:layout_height="80dp"
+                android:text="Torta de Adobada $60"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:textSize="20sp"
+                android:text="Horchata $20"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
