@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:background="#D35555"
     android:orientation="vertical"
     android:padding="25dp"
     tools:context=".TacosActivity">
@@ -16,75 +15,67 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Taqueria Lopez"
-        android:textColor="#FFFFFF"
         android:textSize="50sp"
         android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:paddingTop="30dp"
         android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="20dp"
-            android:orientation="vertical">
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="80dp"
-                android:textSize="20sp"
-                android:text="Taco de Asada $20"
-                android:textColor="#FFFFFF" />
-
-
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="80dp"
-                android:textSize="20sp"
-                android:text="Taco de Adobada $30"
-                android:textColor="#FFFFFF" />
-
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="80dp"
-                android:textSize="20sp"
-                android:text="Coca $20"
-                android:textColor="#FFFFFF" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="80dp"
-                android:textSize="20sp"
-                android:text="Torta de Asada $50"
-                android:textColor="#FFFFFF" />
-
-            <TextView
-                android:layout_width="150dp"
-                android:textSize="20sp"
-                android:layout_height="80dp"
-                android:text="Torta de Adobada $60"
-                android:textColor="#FFFFFF" />
-
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="80dp"
-                android:textSize="20sp"
-                android:text="Horchata $20"
-                android:textColor="#FFFFFF" />
-
-        </LinearLayout>
-
+            <TableRow>
+                <TextView android:text="Producto" android:textStyle="bold" android:padding="8dp"/>
+                <TextView android:text="Precio" android:textStyle="bold" android:padding="8dp"/>
+                <TextView android:text="Cantidad" android:textStyle="bold" android:padding="8dp"/>
+                <TextView android:text="Total" android:textStyle="bold" android:padding="8dp"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:text="Taco de Pastor" android:padding="8dp"/>
+                <TextView android:text="25" android:padding="8dp"/>
+                <EditText android:id="@+id/cantidadTacoPastor" android:text="0" android:inputType="numberDecimal" android:padding="8dp"/>
+                <TextView android:id="@+id/tvTotalTacoPastor"  android:padding="8dp"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:text="Taco de Asada" android:padding="8dp"/>
+                <TextView android:text="20" android:padding="8dp"/>
+                <EditText android:id="@+id/cantidadTacoAsada" android:text="0" android:inputType="numberDecimal" android:padding="8dp"/>
+                <TextView android:id="@+id/tvTotalTacoAsada"  android:padding="8dp"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:text="Torta de Pastor" android:padding="8dp"/>
+                <TextView android:text="65" android:padding="8dp"/>
+                <EditText android:id="@+id/cantidadTortaPastor" android:text="0" android:inputType="numberDecimal" android:padding="8dp"/>
+                <TextView android:id="@+id/tvTotalTortaPastor"  android:padding="8dp"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:text="Torta de Asada" android:padding="8dp"/>
+                <TextView android:text="55" android:padding="8dp"/>
+                <EditText android:id="@+id/cantidadTortaAsada" android:text="0" android:inputType="numberDecimal" android:padding="8dp"/>
+                <TextView android:id="@+id/tvTotalTortaAsada"  android:padding="8dp"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:text="Coca" android:padding="8dp"/>
+                <TextView android:text="15" android:padding="8dp"/>
+                <EditText android:id="@+id/cantidadCoca" android:text="0" android:inputType="numberDecimal" android:padding="8dp"/>
+                <TextView android:id="@+id/tvtotalCoca"  android:padding="8dp"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:text="Horchata" android:padding="8dp"/>
+                <TextView android:text="15" android:padding="8dp"/>
+                <EditText android:id="@+id/cantidadHorchata" android:text="0" android:inputType="numberDecimal" android:padding="8dp"/>
+                <TextView android:id="@+id/tvtotalHorchata"  android:padding="8dp"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:text="" android:padding="8dp"/>
+                <TextView android:text="" android:padding="8dp"/>
+                <Button android:id="@+id/btnCalcular" android:text="Calcular" />
+                <TextView android:id="@+id/tvTotalCuenta" android:text="0" android:padding="8dp"/>
+            </TableRow>
+        </TableLayout>
     </LinearLayout>
-
 </LinearLayout>
