@@ -73,7 +73,8 @@
             <TableRow>
                 <TextView android:text="" android:padding="8dp"/>
                 <TextView android:text="" android:padding="8dp"/>
-                <Button android:id="@+id/btnCalcular" android:text="Calcular" />
+                <TextView android:text="Total" android:padding="8dp"/>
+<!--                <Button android:id="@+id/btnCalcular" android:text="Calcular" />-->
                 <TextView android:id="@+id/tvTotalCuenta" android:text="0" android:padding="8dp"/>
             </TableRow>
         </TableLayout>

@@ -39,7 +39,7 @@ class TacosActivity : AppCompatActivity() {
         }
         initComponents()
         totales()
-        btnCalcular.setOnClickListener { calcular() }
+        //btnCalcular.setOnClickListener { calcular() }
     }
     fun initComponents(){
         etcantidadTacoPastor = findViewById<EditText>(R.id.cantidadTacoPastor)
@@ -55,7 +55,7 @@ class TacosActivity : AppCompatActivity() {
         tvtotalCoca = findViewById<TextView>(R.id.tvtotalCoca)
         tvtotalHorchata = findViewById<TextView>(R.id.tvtotalHorchata)
         tvTotalCuenta = findViewById< TextView>(R.id.tvTotalCuenta)
-        btnCalcular = findViewById<Button>(R.id.btnCalcular)
+        //btnCalcular = findViewById<Button>(R.id.btnCalcular)
     }
 
     fun totales(){
@@ -74,6 +74,7 @@ class TacosActivity : AppCompatActivity() {
             // Actualizamos el textview
             tvTotalTacoPastor.text = "$${String.format("%.2f", totalTacosPastor)}"
             listArray[0] = totalTacosPastor
+            calcular()
         }
 
         etcantidadTacoAsada.doOnTextChanged { text, _, _, _ ->
@@ -81,6 +82,7 @@ class TacosActivity : AppCompatActivity() {
             val totalTacosAsada = cantidadTacosAsada * precioTacoAsada
             tvTotalTacoAsada.text = "$${String.format("%.2f", totalTacosAsada)}"
             listArray[1] = totalTacosAsada
+            calcular()
         }
 
         etcantidadTortaPastor.doOnTextChanged { text, _, _, _ ->
@@ -88,6 +90,7 @@ class TacosActivity : AppCompatActivity() {
             val totalTortaPastor = cantidadTortaPastor * precioTortaPastor
             tvTotalTortaPastor.text = "$${String.format("%.2f", totalTortaPastor)}"
             listArray[2] = totalTortaPastor
+            calcular()
         }
 
         etcantidadTortaAsada.doOnTextChanged { text, _, _, _ ->
@@ -95,18 +98,21 @@ class TacosActivity : AppCompatActivity() {
             val totalTortaAsada = cantidadTortaAsada * precioTortaAsada
             tvTotalTortaAsada.text = "$${String.format("%.2f", totalTortaAsada)}"
             listArray[3] = totalTortaAsada
+            calcular()
         }
         etcantidadCoca.doOnTextChanged { text, _, _, _ ->
             val cantidadCoca = text.toString().toDoubleOrNull() ?: 0.0
             val totalCoca = cantidadCoca * precioCoca
             tvtotalCoca.text = "$${String.format("%.2f", totalCoca)}"
             listArray[4] = totalCoca
+            calcular()
         }
         etcantidadHorchata.doOnTextChanged { text, _, _, _ ->
             val cantidadHorchata = text.toString().toDoubleOrNull() ?: 0.0
             val totalHorchata = cantidadHorchata * precioHorchata
             tvtotalHorchata.text = "$${String.format("%.2f", totalHorchata)}"
             listArray[5] = totalHorchata
+            calcular()
         }
     }
 
